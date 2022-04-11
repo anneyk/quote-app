@@ -1,5 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { Quote } from '../../Quote'
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Quote } from '../../Quote';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
@@ -10,11 +10,16 @@ import { faTimes } from '@fortawesome/free-solid-svg-icons';
 export class QuoteItemComponent implements OnInit {
    
   @Input() quote!: Quote;
+  @Output() onDeleteQuote: EventEmitter<Quote> = new EventEmitter();
   faTimes = faTimes;
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  onDelete(quote: Quote) {
+    this.onDeleteQuote.emit(quote);
   }
 
 }

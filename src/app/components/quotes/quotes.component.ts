@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { QuoteService } from '../../services/quote.service';
 import { Quote } from '../../Quote'
-import { QUOTES } from '../../mock-quotes';
+
 @Component({
   selector: 'app-quotes',
   templateUrl: './quotes.component.html',
@@ -10,10 +10,17 @@ import { QUOTES } from '../../mock-quotes';
 export class QuotesComponent implements OnInit {
   quotes: Quote[] = [];
 
-  constructor(private quoteService: QuoteService) { }
+  constructor(private quoteService: QuoteService) {}
 
   ngOnInit(): void {
     this.quoteService.getQuotes().subscribe((quotes) => (this.quotes = quotes));
   }
 
+  deleteQuote(quote: Quote) {
+    this.quoteService
+    .deleteQuote(quote)
+    .subscribe(
+      () => (this.quotes = this.quotes.filter((q) => q.quote !== quote.quote))
+      );
+  }
 }

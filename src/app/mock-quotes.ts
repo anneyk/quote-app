@@ -19,4 +19,4 @@ export const QUOTES: Quote[]= [
     dateSubmitted: "5th May 2020",
     submittedBy: "name",
   }
-]
+];
