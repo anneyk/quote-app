@@ -1,8 +1,10 @@
-import { HighlightDirective } from './highlight.directive';
+import { Directive, ElementRef } from '@angular/core';
 
-describe('HighlightDirective', () => {
-  it('should create an instance', () => {
-    const directive = new HighlightDirective();
-    expect(directive).toBeTruthy();
-  });
-});
+@Directive({
+  selector: '[appHighlight]'
+})
+export class HighlightDirective{
+  constructor(private elem: ElementRef){
+      this.elem.nativeElement.style.backgroundColor='#a790ff';
+  }
+}

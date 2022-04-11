@@ -8,10 +8,10 @@ import { Quote } from '../quote';
 export class QuoteService{
 
     quotes: Quote[] = [  
-        new Quote(uuid(),'The greatest glory in living lies not in never falling, but in rising every time we fall.', 'Nelson Mandela',0,0,'Makamu Kelvin',new Date(2020,8,14),false),
-        new Quote(uuid(),'The way to get started is to quit talking and begin doing.', 'Walt Disney',0,0,'Kelvin Makamu',new Date(2020,8,15),false),
-        new Quote(uuid(),'If life were predictable it would cease to be life, and be without flavor.', 'Eleanor Roosevelt',0,0,'Makamu Kelvin',new Date(2020,8,16),false),
-        new Quote(uuid(),'If you set your goals ridiculously high and it\'s a failure, you will fail above everyone else\'s success.', 'James Cameron',0,0,'Kelvin Makamu',new Date(2020,8,18),false),
+        new Quote(uuid(),'You never really understand a person until you consider things from his point of view. Until you climb inside of his skin and walk around in it.', 'Harper Lee',0,0,'Annet Khavere',new Date(2000,7,5),false),
+        new Quote(uuid(),'There is nothing noble in being superior to your fellow man; true nobility is being superior to your former self.', 'Ernest Hemingway',0,0,'Annet Khavere',new Date(2021,3,9),false),
+        new Quote(uuid(),'I was never afraid of failure; for I would sooner fail than not be among the greatest.', 'John Keats',0,0,'Annet Khavere',new Date(2010,5,21),false),
+        new Quote(uuid(),'If you have built castles in the air, your work need not be lost; that is where they should be. Now put the foundations under them.', 'Henry David Thoreau',0,0,'Annet Khavere',new Date(2005,2,16),false),
     ];
 
     getQuotes(){

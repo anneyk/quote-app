@@ -1,7 +1,7 @@
 <form #quoteForm="ngForm" (ngSubmit)='createNewQuote();'>
 
   <div class="col-md-12 col-lg-12 col-sm-12">
-      <h4>New Quote</h4>
+      <h4>Add Quote</h4>
       <hr/>
   </div>
 
@@ -13,7 +13,7 @@
            [(ngModel)]='model.quote' #quote='ngModel'></textarea>
            <div [hidden]="quote.valid || quote.pristine"
                   class="alert alert-danger">
-              Quote is required
+              Please insert Quote!
           </div>
       </div>
   </div>
@@ -25,7 +25,7 @@
            required id="author" [(ngModel)]='model.author' #author='ngModel'/>
            <div [hidden]="author.valid || author.pristine"
                   class="alert alert-danger">
-              Author is required
+              Please insert Author!
           </div>
       </div>
   </div>
@@ -37,14 +37,14 @@
            required id="submitted_by" [(ngModel)]='model.submitted_by' #submitted_by='ngModel'/>
            <div [hidden]="submitted_by.valid || submitted_by.pristine"
                   class="alert alert-danger">
-              Submitted By is required
+              Please insert submitted by!
           </div>
       </div>
   </div>
 
-  <div class="col-md-12 col-lg-12 col-sm-12">
+  <div class="col-md-12 col-lg-12 col-sm-12 mt-3">
       <div class="form-group">
-          <input type="submit" value="Add Quote" class="btn btn-success" id="btn-commit"
+          <input type="submit" value="Add Quote" class="btn btn-primary" id="btn-commit"
            [disabled]="!quoteForm.form.valid"/>
       </div>
   </div>
