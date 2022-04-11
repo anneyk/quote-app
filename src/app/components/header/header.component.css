@@ -1,6 +1,0 @@
-header {
-  display: flex;
-  justify-content: space-between; /*push button to the right*/
-  align-items: center;
-  margin-bottom: 20px;
-}
